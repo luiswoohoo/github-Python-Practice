@@ -1,3 +1,4 @@
+# Added a comment while on master branch in Git
 par = int(input())
 strokes = int(input())
 
