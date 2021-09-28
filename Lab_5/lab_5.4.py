@@ -1,8 +1,7 @@
-i = 1
+num_printed = 0
 
-user_num = int(input()) # Assume positive
+num_stars = int(input())
 
-
-while i <= user_num:
-    print(i)
-    i += 1
+while num_printed < num_stars:
+    print('*')
+    num_printed += 1
