@@ -1,6 +1,4 @@
 user_num = int(input())
-while user_num >= 0:
-  print('Body')
-  user_num = int(input())
-
-print('Done.')
+while user_num >= 1:
+  user_num /= 2
+  print(user_num)
