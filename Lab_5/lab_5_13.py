@@ -17,7 +17,7 @@ sum_stats = {
 
 num_rolls = int(input('Enter number of rolls:\n'))
 
-if num_rolls >= 1:
+while num_rolls >= 1:
     for i in range(num_rolls):
         die1 = random.randint(1, 6)
         die2 = random.randint(1, 6)
@@ -42,5 +42,11 @@ if num_rolls >= 1:
     print('11s:', sum_stats[11])
     print('12s:', sum_stats[12])
 
-else:
-    print('Invalid number of rolls. Try again.')
+# Continue asking for more rolls if rolls is 1 or more
+    num_rolls = int(input('Enter number of rolls:\n'))
+    if num_rolls >= 1:
+        continue
+
+    else:
+        print('Invalid number of rolls. Try again.')
+        break
