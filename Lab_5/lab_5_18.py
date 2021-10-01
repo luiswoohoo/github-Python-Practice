@@ -9,4 +9,19 @@ e = int(input())
 f = int(input())
 
 ''' Type your code here. '''
+found_solution = False
 
+for x in range(-10, 11):
+    for y in range(-10, 11):
+
+        if ((a * x) + (b * y) == c) and ((d * x) + (e * y) == f):
+            print('x =', x, ',', 'y =', y)
+
+            found_solution = True
+            break
+
+    if found_solution:
+        break
+
+if not found_solution:
+    print('There is no solution')
