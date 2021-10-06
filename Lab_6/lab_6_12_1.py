@@ -1,11 +1,21 @@
-def add_grade(student_grades):
+def add_grade():
     print('Entering grade. \n')
     name, grade = input(grade_prompt).split()
     student_grades[name] = grade
 
 # FIXME: Create delete_name function
+def delete_name():
+    print('Deleting grade.\n')
+    name = input(delete_prompt)
+    del student_grades[name]
+
 
 # FIXME: Create print_grades function
+def print_grades():
+    print('Printing grades.\n')
+    for name, grade in student_grades.items():
+        print(name, 'has a', grade)
+
 
 student_grades = {}  # Create an empty dict
 grade_prompt = "Enter name and grade (Ex. 'Bob A+'):\n"
@@ -19,17 +29,14 @@ command = input(menu_prompt).lower().strip()
 
 while command != '4':  # Exit when user enters '4'
     if command == '1':
-        add_grade(student_grades)
+        add_grade()
     elif command == '2':
         # FIXME: Only call delete_name() here
-        print('Deleting grade.\n')
-        name = input(delete_prompt)
-        del student_grades[name]
+        delete_name()
+
     elif command == '3':
         # FIXME: Only call print_grades() here
-        print('Printing grades.\n')
-        for name, grade in student_grades.items():
-            print(name, 'has a', grade)
+        print_grades()
     else:
         print('Unrecognized command.\n')
 
