@@ -1,4 +1,4 @@
-user_input= input()
+user_input = input()
 lines = user_input.split(',')
 
 # This line uses a construct called a list comprehension, introduced elsewhere,
@@ -7,4 +7,9 @@ lines = user_input.split(',')
 
 mult_table = [[int(num) for num in line.split()] for line in lines]
 
-''' Your solution goes here '''
+for row in mult_table:
+    for item in row:
+        if item == row[len(row) - 1]:
+            print(item)
+        else:
+            print(item, end=' | ')
