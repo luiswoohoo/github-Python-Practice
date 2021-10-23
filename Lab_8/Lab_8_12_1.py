@@ -11,12 +11,19 @@ while True:  # Exit when user enters no input
     if command == '1':
         name, grade = input(grade_prompt).split()
         # Your code here
+        student_grades[name] = grade
+
     elif command == '2':
-        # Your code here
+        name = input('Enter name to be deleted:')
+        if name in student_grades:
+            del student_grades[name]
+        else:
+            print('That student does not exist')
+
     elif command == '3':
-        # Your code here
+        print(student_grades)
+
     elif command == '4':
         break
     else:
         print('Unrecognized command.')
-
