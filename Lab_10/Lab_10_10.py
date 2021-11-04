@@ -5,8 +5,8 @@ try:
     quotient = int(user_num) // int(div_num)
     print(quotient)
 
-except ValueError:
-    print('Input Exception: invalid literal for int() with base 10: \'{}\''.format(user_num))
+except ValueError as ve_exception:
+    print('Input Exception: {}'.format(ve_exception))
 
-except ZeroDivisionError:
-    print('Zero Division Exception: integer division or modulo by zero')
+except ZeroDivisionError as zd_exception:
+    print('Zero Division Exception: {}'.format(zd_exception))
