@@ -37,3 +37,4 @@ new_dict = thesaurus_builder(synonyms_list)
 # print(new_dict)
 
 print_synonyms(file_input, letter_input, new_dict)
+#test
