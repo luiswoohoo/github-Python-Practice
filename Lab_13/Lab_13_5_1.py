@@ -12,4 +12,4 @@ def compute_nth_fib(num):
         return fib
 
 fib_num = int(input())
-print(compute_nth_fib(fib_num))
+print(compute_nth_fib(fib_num)
