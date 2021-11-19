@@ -1,7 +1,10 @@
 def all_permutations(permList, nameList):
 
     if len(nameList) == 0:
-        print(permList[0], permList[1], permList[2], sep=' ')
+        names_to_print = ''
+        for name in permList:
+            names_to_print += (name + ' ')
+        print(names_to_print)
 
     else:
         for i in range(len(nameList)):
